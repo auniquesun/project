@@ -1,0 +1,102 @@
+53, for, multi-group classification
+62, for, keyword visual representation
+62, for, image retrieval
+62, for, image annotation
+91, for, neural networks
+91, for, neural network
+387, for, bayesian inference
+387, for, bayesian network
+387, for, bayesian networks
+4969, for, bayesian framework
+4969, for, bayesian frameworks
+1868, for, algorithm
+1964, for, ensemble classifier
+1964, for, ensemble classifiers
+4714, for, support vector machines
+4714, for, support vector machine
+4714, for, support vector regression
+5150, for, method
+5150, for, methods
+7832, for, expert system
+7832, for, expert systems
+7832, for, experts system
+7832, for, experts systems
+
+
+4968, using, classification
+5022, using, visualization
+5203, using, service selection
+7051, using, object tracking
+7051, using, object segmentation
+7808, using, information retrieval
+7896, using, parallel processing
+7909, using, parameter estimation
+7941, using, ensemble classifier
+7941, using, ensemble classifiers
+7941, using, belief functions
+7941, using, belief function
+7941, using, belief networks
+7941, using, belief network
+8162, using, model-based
+8673, using, grammer knowledge
+8674, using, algorithm
+8717, using, neural network
+8717, using, neural networks
+8726, using, automatic speech recognition
+
+
+8833, with, knowledge
+8860, with, relational models
+8860, with, relational model
+8860, with, hidden structures
+8860, with, hidden structure
+8875, with, experience
+8875, with, open source
+8877, with, skeleton-based models
+8877, with, skeleton-based model
+8883, with, hybrid
+8895, with, range-based
+8900, with, software process
+8900, with, software processes
+8939, with, analysis
+9876, with, neural networks
+9876, with, neural network
+9876, with, performance
+9890, with, design
+9898, with, comparision
+9934, with, creative design
+10125, with, homogenization
+10156, with, software
+
+
+10392, by, operation planning
+10392, by, operation
+10428, by, various objects
+10480, by, system users
+10480, by, system user
+10490, by, design
+10490, by, design of mechanism
+10634, by, languages
+10634, by, language
+10634, by, languages generated
+10759, by, stochastic model combination
+10759, by, stochastic model
+10759, by, stochastic models
+10785, by, genetic algorithm
+10785, by, genetic algorithms
+10795, by, evaluation
+10795, by, evaluations
+10795, by, evaluation of assembly plan
+10825, by, scale multiplication
+10874, by, online
+10886, by, rotation
+11008, by, fuzzy resource allocation
+11124, by, negotiation
+11149, by, agent
+11149, by, agents
+11258, by, community
+11258, by, communities
+11258, by, community taxonomies
+11275, by, crossover
+11302, by, similar training set
+11302, by, similar
