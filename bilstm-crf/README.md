@@ -99,9 +99,9 @@ Once you have produced your data files, change the parameters in `config.py` lik
 
 ```
 # dataset
-dev_filename = "data/dev/dev.txt"
-test_filename = "data/test/test.txt"
-train_filename = "data/train/train.txt"
+dev_filename = "../../data/dev/dev.txt"
+test_filename = "../../data/test/test.txt"
+train_filename = "../../data/train/train.txt"
 ```
 
 ## Results
