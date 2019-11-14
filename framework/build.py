@@ -4,8 +4,9 @@ from preprocess.preprocess import Preprocess
 
 if __name__ == '__main__':
     """
-    从语料中构建训练数据的步骤:
+    从语料中构建训练数据的步骤:    
     a. select 选择标题行
+    b. 从标题行迭代发现 new pattern words
     b. 根据pattern words构建pattern + phrase行 --> build_standard_pattern
     c. 根据pattern + phrase构建标签数据 --> build_standard_data
     """
@@ -21,7 +22,7 @@ if __name__ == '__main__':
         build.validate_standard_data()
     elif option == 'title':
         build.build_title_with_patt()
-    # 建立含有 pattern word 的标题的pattern文件，例 1, P: with, multi-armed bandit, constraints
+    # 建立含有 pattern word 的标题的pattern文件，例 "1, P: with, multi-armed bandit, constraints"
     elif option == 'pattern':
         build.build_standard_pattern()
     # 构建训练数据
