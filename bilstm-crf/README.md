@@ -1,18 +1,5 @@
-# Named Entity Recognition with Tensorflow
-
-[ DECLARE ]This code referenced from 'https://github.com/guillaumegenthial/sequence_tagging'. <br/>
-
-This repo implements a NER model using Tensorflow (LSTM + CRF + chars embeddings).
-
-__A [better implementation is available here, using `tf.data` and `tf.estimator`, and achieves an F1 of 91.21](https://github.com/guillaumegenthial/tf_ner)__
-
-State-of-the-art performance (F1 score between 90 and 91).
-
-Check the [blog post](https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html)
-
-## Task
-
-Given a sentence, give a tag to each word. A classical application is Named Entity Recognition (NER). Here is an example
+# Sequence Labeling with Tensorflow
+This project implements a squence labeling model using Tensorflow (LSTM + CRF + chars embeddings). Given a sentence, give a tag to each word. A classical application is Named Entity Recognition (NER). Here is an example
 
 ```
 John   lives in New   York
@@ -87,17 +74,28 @@ A default test file is provided to help you getting started.
 
 
 ```
-John B-PER
-lives O
-in O
-New B-LOC
-York I-LOC
-. O
+Time P
+dependent P
+analysis P
+with O
+dynamic M
+counter M
+measure M
+trees M
 
-This O
-is O
-another O
-sentence
+Electrification P
+of P
+isolated P
+areas P
+by O
+interconnecting O
+renewable M
+sources M
+(ERD O
+project) O
+: O
+lessons O
+learned O
 ```
 
 
@@ -105,15 +103,18 @@ Once you have produced your data files, change the parameters in `config.py` lik
 
 ```
 # dataset
-dev_filename = "data/coNLL/eng/eng.testa.iob"
-test_filename = "data/coNLL/eng/eng.testb.iob"
-train_filename = "data/coNLL/eng/eng.train.iob"
+dev_filename = "data/dev/dev.txt"
+test_filename = "data/test/test.txt"
+train_filename = "data/train/train.txt"
 ```
-
-
 
 
 ## License
 
 This project is licensed under the terms of the apache 2.0 license (as Tensorflow and derivatives). If used for research, citation would be appreciated.
 
+
+## Reference
+[1] https://github.com/guillaumegenthial/sequence_tagging
+[2] https://github.com/guillaumegenthial/tf_ner
+[3] https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html
