@@ -1,5 +1,5 @@
 # BERT Sequence Labeling
-Fine-tuning Google's BERT for sequence tagging on datasets provided by our framework. The original version contains some hard codes and lacks corresponding annotations, which is inconvenient to understand. So in this updated version,there are some new ideas and tricks（on data Preprocessing and layer design）that can help you quickly implement the fine-tuning model. You just need to try to modify crf_layer or softmax_layer.
+Fine-tuning Google's BERT for sequence tagging on datasets provided by our framework. The original version contains some hard codes and lacks corresponding annotations, which is inconvenient to understand. So in this updated version,there are some new ideas and tricks on data preprocessing and layer design that can help you quickly implement the fine-tuning model. You just need to try to modify crf_layer or softmax_layer.
 
 ### Folder Description:
 ```
@@ -43,7 +43,7 @@ python bert_seq_labeling.py\
 **Notice:** cased model was recommened, according to [this](https://arxiv.org/abs/1810.04805) paper. CoNLL-2003 dataset and perl Script comes from [here](https://www.clips.uantwerpen.be/conll2003/ner/)
 
 
-### RESULTS
+### Results
 #### Parameter setting:
 * crf=False
 * max_seq_length=22
