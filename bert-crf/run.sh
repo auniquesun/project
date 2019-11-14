@@ -1,7 +1,7 @@
   #!/usr/bin/env bash
 
-  python BERT_NER_new.py\
-    --task_name="NER"  \
+  python bert_seq_labeling.py\
+    --task_name="sequence labeling"  \
     --do_lower_case=False \
     --crf=False \
     --do_train=True   \
