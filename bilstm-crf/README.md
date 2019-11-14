@@ -1,4 +1,4 @@
-# Sequence Labeling with Tensorflow
+# BiLSTM and CRF for Sequence Labeling
 This project implements a squence labeling model using Tensorflow (LSTM + CRF + chars embeddings). Given a sentence, give a tag to each word. A classical application is Named Entity Recognition (NER). Here is an example
 
 ```
