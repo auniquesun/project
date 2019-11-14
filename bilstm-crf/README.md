@@ -26,8 +26,7 @@ Similar to [Lample et al.](https://arxiv.org/abs/1603.01360) and [Ma and Hovy](h
 ```
 make glove
 ```
-
-Alternatively, you can download them manually [here](https://nlp.stanford.edu/projects/glove/) and update the `glove_filename` entry in `config.py`. You can also choose not to load pretrained word vectors by changing the entry `use_pretrained` to `False` in `model/config.py`.
+> Alternatively, you can download them manually [here](https://nlp.stanford.edu/projects/glove/) and update the `glove_filename` entry in `config.py`. You can also choose not to load pretrained word vectors by changing the entry `use_pretrained` to `False` in `model/config.py`.
 
 2. Build the training data, train and evaluate the model with
 ```
@@ -68,10 +67,7 @@ Training time on NVidia Tesla K80 is 110 seconds per epoch on CoNLL train set us
 ## Training Data
 
 
-The training data must be in the following format (identical to the CoNLL2003 dataset).
-
-A default test file is provided to help you getting started.
-
+The training data must be in the following format (identical to the CoNLL2003 dataset). Show you the format with an example.
 
 ```
 Time P
@@ -108,10 +104,10 @@ test_filename = "data/test/test.txt"
 train_filename = "data/train/train.txt"
 ```
 
-## Reference
-[1] https://github.com/guillaumegenthial/sequence_tagging
-[2] https://github.com/guillaumegenthial/tf_ner
-[3] https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html
+## References
+[1] https://github.com/guillaumegenthial/sequence_tagging  
+[2] https://github.com/guillaumegenthial/tf_ner  
+[3] https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html  
 
 ## License
 
