@@ -3,7 +3,8 @@
 """
 # Copyright 2018 The Google AI Language Team Authors.
 # Copyright 2019 The BioNLP-HZAU Kaiyin Zhou
-# Time:2019/04/08
+# Copyright 2019 Hongyu Sun (Renmin University of China)
+# Time:2019/11/14
 """
 
 from __future__ import absolute_import
