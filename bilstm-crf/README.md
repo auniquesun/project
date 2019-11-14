@@ -108,13 +108,11 @@ test_filename = "data/test/test.txt"
 train_filename = "data/train/train.txt"
 ```
 
-
-## License
-
-This project is licensed under the terms of the apache 2.0 license (as Tensorflow and derivatives). If used for research, citation would be appreciated.
-
-
 ## Reference
 [1] https://github.com/guillaumegenthial/sequence_tagging
 [2] https://github.com/guillaumegenthial/tf_ner
 [3] https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html
+
+## License
+
+This project is licensed under the terms of the apache 2.0 license (as Tensorflow and derivatives). If used for research, citation would be appreciated.
