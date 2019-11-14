@@ -1,10 +1,5 @@
 # BERT Sequence Labeling
-
-
-Finetuning Google's BERT for sequence tagging on datasets provided by our framework. 
-
-
-The original version （see old_version for more detail） contains some hard codes and lacks corresponding annotations,which is inconvenient to understand. So in this updated version,there are some new ideas and tricks （On data Preprocessing and layer design） that can help you quickly implement the fine-tuning model (you just need to try to modify crf_layer or softmax_layer).
+Finetuning Google's BERT for sequence tagging on datasets provided by our framework. The original version（see old_version for more detail）contains some hard codes and lacks corresponding annotations, which is inconvenient to understand. So in this updated version,there are some new ideas and tricks（On data Preprocessing and layer design）that can help you quickly implement the fine-tuning model (you just need to try to modify crf_layer or softmax_layer).
 
 ### Folder Description:
 ```
