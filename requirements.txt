@@ -1,4 +1,5 @@
 python >= 3.6.6
 nltk >= 3.2.4
 tensorflow-gpu >= 1.13.1
+cuda = 8.0
 numpy >= 1.16.4
