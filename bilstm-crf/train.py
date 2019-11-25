@@ -1,3 +1,10 @@
+#! usr/bin/env python3
+# -*- coding:utf-8 -*-
+"""
+# Copyright 2019 *** (for blind review)
+# Time:2019/11/14
+"""
+
 from model.data_utils import CoNLLDataset
 from model.ner_model import NERModel
 from model.config import Config
