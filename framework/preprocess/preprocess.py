@@ -1,4 +1,9 @@
-# -*- coding: utf-8 -*-
+#! usr/bin/env python3
+# -*- coding:utf-8 -*-
+"""
+# Copyright 2019 *** (for blind review)
+# Time:2019/11/14
+"""
 
 class Preprocess:
     def __init__(self):
