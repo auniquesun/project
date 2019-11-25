@@ -1,3 +1,10 @@
+#! usr/bin/env python3
+# -*- coding:utf-8 -*-
+"""
+# Copyright 2019 *** (for blind review)
+# Time:2019/11/14
+"""
+
 from model.config import Config
 from model.data_utils import CoNLLDataset, get_vocabs, UNK, NUM, \
     get_glove_vocab, write_vocab, load_vocab, get_char_vocab, \
