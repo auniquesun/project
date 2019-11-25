@@ -1,9 +1,7 @@
 #! usr/bin/env python3
 # -*- coding:utf-8 -*-
 """
-# Copyright 2018 The Google AI Language Team Authors.
-# Copyright 2019 The BioNLP-HZAU Kaiyin Zhou
-# Copyright 2019 Hongyu Sun (Renmin University of China)
+# Copyright 2019 *** (for blind review)
 # Time:2019/11/14
 """
 
