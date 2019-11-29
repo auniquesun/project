@@ -1,12 +1,12 @@
 # Preprocess
 1. Before doing experiments with the framework we developed, some preprocessing tasks are necessary.  
-    * At first, you need to download the datasets and extract them into ../data. note that the datasets 
+> At first, you need to download the datasets and extract them into ../data. note that the datasets 
 are quite large, maybe downloading them will take a lot of time. Specifically, we use [MAG](https://academicgraphv2.blob.core.windows.net/oag/mag/paper/mag_papers_0.zip) and [AMiner](https://lfs.aminer.cn/lab-datasets/citation/dblp.v10.zip)
-    * Seconly, in order to improve robustness, we need to select titles randomly from the datasets.
+> Seconly, in order to improve robustness, we need to select titles randomly from the datasets.
 ```
     python prep.py --select
 ```
-    * Sometimes, titles selected from the datasets are not unbalaced. It means the number of positives is far from the number of negatives. To correct that, you can run the following command
+> Sometimes, titles selected from the datasets are not unbalaced. It means the number of positives is far from the number of negatives. To correct that, you can run the following command
 ```
     python prep.py --balance
 ```
@@ -16,9 +16,9 @@ are quite large, maybe downloading them will take a lot of time. Specifically, w
 ```
     python bootstrap.py
 ```
-    * after that, the new pattern words will be stored in the file 'new_pattern_word.txt'
+> after that, the new pattern words will be stored in the file 'new_pattern_word.txt'
 2. Step 2: pattern-based phrase extraction  
-    * it's turn to pattern-based phrase extraction, we implement it in the build.py. run the command
+> it's turn to pattern-based phrase extraction, we implement it in the build.py. run the command
 ```
     python phrase_extraction.py
 ```
