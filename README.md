@@ -8,3 +8,6 @@ returned by previous two steps, and this step corresponds to [Algorithm 3](frame
 
 # License
 This project is licensed under the terms of the Apache 2.0 License. If used for research, citation would be appreciated.
+
+# Contact
+Anyone who is confronted with problems can open issues under this project. I will reply you in time.
