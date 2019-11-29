@@ -29,9 +29,8 @@ by previous two steps
 ```
 
 4. Step 4: train supervised sequence labeling models.  
-For comparisons, the labeling model relying only on patterns or rules is implemented. The performance is unsatisfactory. You can run this command to see the results
+For comparisons, the labeling model relying only on patterns or rules is implemented. However, the performance is unsatisfactory. You can run this command to see the results
 ```
     python bt_only.py
 ```
-However, the performance of supervised sequence labeling models based on our framework is quite impressive. Details are presented in directory ../bert-crf and ../bilstm-crf. Hence, it is the 
-necessity and effectivenes of our framework. 
+    Instead, the performance of supervised sequence labeling models based on our framework is quite impressive. Details are presented in directory ../bert-crf and ../bilstm-crf. Hence, it is the necessity and effectivenes of our framework. 
