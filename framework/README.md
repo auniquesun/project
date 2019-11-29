@@ -33,4 +33,4 @@ For comparisons, the labeling model relying only on patterns or rules is impleme
 ```
     python bt_only.py
 ```
-    Instead, the performance of supervised sequence labeling models based on our framework is quite impressive. Details are presented in directory ../bert-crf and ../bilstm-crf. Hence, it is the necessity and effectivenes of our framework. 
+> Instead, the performance of supervised sequence labeling models based on our framework is quite impressive. Details are presented in directory ../bert-crf and ../bilstm-crf.
