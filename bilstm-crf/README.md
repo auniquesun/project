@@ -162,6 +162,5 @@ Acc = 0.7745
 ```
 
 ## References
-[1] https://github.com/guillaumegenthial/sequence_tagging  
+[1] [Bidirectional LSTM-CRF Models for Sequence Tagging](https://arxiv.org/abs/1508.01991)  
 [2] https://github.com/guillaumegenthial/tf_ner  
-[3] https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html  
