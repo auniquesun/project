@@ -11,7 +11,7 @@ are quite large, maybe downloading them will take a lot of time. Specifically, w
     python prep.py --balance
 ```
 
-# Flowchart
+# Framework
 1. Step 1: find new pattern words from massive text corpus under the settings of weak supervision.  
 ```
     python bootstrap.py
