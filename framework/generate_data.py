@@ -6,10 +6,12 @@ Copyright 2019 *** (for blind review)
 Date: 2019/11/14
 """
 
-def build_standard_data():
+def generate_standard_data():
     print('>> starting building standard data')
     file_patt = input('fin > enter pattern file name: ')
+    # input parameter: the dataset of titles
     file_title = input('fin > enter title file name: ')
+    # output: standard datasets with labels whose format is consistent with CoNLL 2003
     file_train = input('fout < enter train file name: ')
     with open('pattern/' + file_patt) as fin_pattern, open('title/' + file_title) as fin_title, open('data/' + file_train, 'w') as fout:
         lines_pattern = fin_pattern.readlines()
@@ -60,4 +62,4 @@ def build_standard_data():
 
 
 if __name__ == '__main__':
-    build_standard_data()
+    generate_standard_data()
