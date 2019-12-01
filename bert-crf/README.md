@@ -8,8 +8,8 @@ BERT-CRF
 |____ cased_L-12_H-768_A-12	    # need download from [here](https://storage.googleapis.com/bert_models/2018_10_18/cased_L-12_H-768_A-12.zip)
 |____ data		            # train data
 |____ middle_data	            # middle data (label id map)
-|____ output			    # output (final model, predict results)
-|____ bert_seq_labeling.py		    # mian code
+|____ output			    # output (make this directory before training, to store final model, predict results)
+|____ bert_seq_labeling.py	# mian code
 |____ run.sh    		    # run model and eval result
 
 ```
