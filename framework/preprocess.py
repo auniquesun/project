@@ -7,7 +7,7 @@ Date: 2019/11/14
 """
 
 import argparse
-from preprocess.preprocess import Preprocess
+from util import Preprocess
 
 if __name__ == '__main__':
     """
