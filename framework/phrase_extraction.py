@@ -6,19 +6,25 @@ Copyright 2019 *** (for blind review)
 Date: 2019/11/14
 """
 
+
 def pattern_phrase_extraction():
     print('>> starting building standard pattern')
+    
+    # input parameter: the set of known pattern words, KPW
+    # note: after bootstrapping iteration, the KPW has been merged with NPW so the KPW contains latest modification.    
     patterns = []
-    with open('pattern_words.txt') as fin:
+    with open('known_pattern_words.txt') as fin:
         lines = fin.readlines()
         for line in lines:
             if len(line.strip()) > 0 and '#' not in line:   # 去掉空行，注释行
                 patterns.append(line.strip())
 
     pos_examples, neg_examples = [], []
+    # input parameter: the dataset of titles
     file_title = input('fin > enter title file name: ')
+    # output: patterns in titles containing label id information
     file_patt = input('fout < enter pattern file name: ')
-    file_title_real = input('fout < enter real title file name: ')
+    file_title_real = input('fout < enter real title file name: ')    
     with open('title/' + file_title) as fin, open('pattern/' + file_patt, 'w') as fout, \
             open('title/' + file_title_real, 'w') as fout_real:
         lines = fin.readlines()
@@ -92,3 +98,4 @@ def pattern_phrase_extraction():
 
 if __name__ == '__main__':
     pattern_phrase_extraction()
+    
