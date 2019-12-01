@@ -9,7 +9,7 @@ BERT-CRF
 |____ data		            # train data
 |____ middle_data	            # middle data (label id map)
 |____ output			    # output (make this directory before training, to store final model and predict results)
-|____ bert_seq_labeling.py	    # mian code
+|____ bert_seq_labeling.py	    # main code
 |____ run.sh    		    # run model and eval result
 
 ```
