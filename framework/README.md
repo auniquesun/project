@@ -20,12 +20,12 @@ are quite large, maybe downloading them will take a lot of time. Specifically, w
 2. Step 2: pattern-based phrase extraction  
 > it's turn to pattern-based phrase extraction, we implement it in the build.py. run the command
 ```
-    python phrase_extraction.py
+    python extract.py
 ```
 3. Step 3: generate data with labels according to the overall pattern words and phrases returned 
 by previous two steps  
 ```
-    python generate_data.py
+    python generate.py
 ```
 
 4. Step 4: train supervised sequence labeling models.  
