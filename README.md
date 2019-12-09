@@ -6,8 +6,6 @@ We separate our framework into four parts, let we put them together. The figure 
 returned by previous two steps, and this step corresponds to [Algorithm 3](framework/generate.py). At last, it turns to step 4, various classical sequence labeling models are trained on labeled data to present the problem and the method using a prediction sequence of tags.  
 ![figiure](data/image/flowchart.png)
 
-# License
-This project is licensed under the terms of the Apache 2.0 License. If used for research, citation would be appreciated.
 
 # Contact
 Anyone who is confronted with problems can open issues under this project. I will reply you in time.
