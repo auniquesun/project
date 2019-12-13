@@ -32,7 +32,7 @@ def generate_standard_data():
                     punctuation = word[-1]
                     word = word[0: len(word)-1]
                     flag = True
-                # 生成负例
+                # generate negative examples
                 if pattern == 'P: None':
                     if len(word) > 0:
                         fout.write(word + ' O' + '\n')
