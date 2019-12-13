@@ -48,7 +48,6 @@ class Preprocess:
                         punctuation = word[-1]
                         word = word[0: len(word)-1]
                         flag = True
-                    # 生成负例
                     if pattern == 'P: None':
                         if len(word) > 0:
                             fout.write(word + ' O' + '\n')
@@ -104,7 +103,7 @@ class Preprocess:
         with open('pattern_words.txt') as fin:
             lines = fin.readlines()
             for line in lines:
-                if len(line.strip()) > 0 and '#' not in line:   # 去掉空行，注释行
+                if len(line.strip()) > 0 and '#' not in line:
                     patterns.append(line.strip())
 
         pos_examples, neg_examples = [], []
@@ -120,27 +119,26 @@ class Preprocess:
                 if len(line.strip()) != 0:
                     tokens = line.split(' ')
                     tokens = [token for token in tokens if len(token) > 0]
-                    # 删除 'Shift-Net: Image Inpainting via Deep Feature Rearrangement' 第一个词
-                    # 标题中这种情况很多，对chunk影响比较大
+                    
                     if len(tokens):
                         print(index+1, '-->', tokens[0], '-->')
                     if len(tokens) > 0 and tokens[0][-1] == ':':
                         del tokens[0]
-                    # token 可能是大写/小写，统一转换成小写
+                    
                     tokens_lower = [token.lower() for token in tokens]
-                    # 用来标记不包含 pattern 的title
+                    
                     count = 0
                     written_pattern = False
                     written_none = False
                     for pattern in patterns:
                         flag = False
-                        # pattern 都是小写
+                        
                         if pattern == 'based on':
                             if 'based' in tokens_lower and 'on' in tokens_lower:
                                 if tokens_lower.index('on') - tokens_lower.index('based') == 1:
                                     flag = True
                         if pattern in tokens_lower or flag:
-                            #保证不会出现某个词包含pattern，然后把这个词切分的情况
+                            
                             if flag == False:
                                 idx = tokens_lower.index(pattern)
                                 former = tokens[:idx]
@@ -157,7 +155,7 @@ class Preprocess:
                                     pos_examples.append(str(index+1) + ', P: ' + pattern + ', ' + former[0] + ', ' + latter[0] + '\n')
                                     fout_real.write(line)
                                     self.line_index += 1
-                                    written_pattern = True  # 如果写入一个 pattern 对应的title，把count记作-2，用来break这个循环                                
+                                    written_pattern = True
                             else:
                                 """
                                 句子中存在pattern word，但是len(former)，len(latter)中至少一个为0
@@ -166,11 +164,11 @@ class Preprocess:
                                 从这个例子想到另一个pattern，using ... to ...
                                 """                       
                                 written_none = True
-                        if pattern not in tokens_lower and flag == False: # pattern word不在句子里头
+                        if pattern not in tokens_lower and flag == False:
                             count += 1
                         if written_pattern:
                             break
-                    if count == len(patterns) or (not written_pattern and written_none):  # 没有一个pattern word在句子里头，或者句子里有pattern word，但是chunk之后的former/latter有一个为空
+                    if count == len(patterns) or (not written_pattern and written_none):
                         if len(neg_examples) < 500000:
                             neg_examples.append(str(index+1) + ', P: None' + '\n')
                             fout_real.write(line)
@@ -190,7 +188,7 @@ class Preprocess:
 
         titles = []
         N = input('within function "line_N_K", please input N: ')
-        for i in range(int(N) * 1000): #range的数目决定了数据有多少行
+        for i in range(int(N) * 1000):
             r = randint(0, len(lines)-1)
             print('randint:', r)
             title = json.loads(lines[r])['title']
@@ -230,9 +228,9 @@ class Preprocess:
             for index, line in enumerate(lines):
                 if len(line.strip()) > 0:
                     if len(line.strip().split(' ')) == 1:
-                        # 打印出的行，表明不符合规范
+                        # lines that are invalid
                         print('index: ', index+1, 'line: ', line)
-        print('[ ' + valid_name + '符合规范' + ' ]')
+        print('[ ' + valid_name + 'is valid' + ' ]')
 
 
     def build_patt_skipgram(self):
@@ -258,7 +256,7 @@ class Preprocess:
                         else:
                             before_patt = ' '.join(words[idx-3:idx])
                         if len(words) - idx < 3:
-                            # 基于patt_word不是title最后一个词的假设
+                            # here is a premise: patt_word was not the last word in the title
                             after_patt = ' '.join(words[idx+1:])
                         else:
                             after_patt = ' '.join(words[idx+1:idx+4])
