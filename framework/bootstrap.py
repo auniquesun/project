@@ -28,8 +28,8 @@ def find_new_pattern(window_size):
             for phrase in phrases:
                 if phrase in title:
                     contexts = title.split(phrase)
-                    prev_phrase = contexts[0].split(' ')[::-1]  # prev 从end到start取元素
-                    next_phrase = contexts[1].split(' ')    # next 从start到end取元素
+                    prev_phrase = contexts[0].split(' ')[::-1]  # prev_phrase: from end to start
+                    next_phrase = contexts[1].split(' ')    # next_phrase: from start to end
                     for idx, ele in enumerate(prev_phrase):
                         if idx < window_size:
                             new_patterns.append(ele)
