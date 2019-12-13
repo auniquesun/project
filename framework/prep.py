@@ -14,7 +14,7 @@ if __name__ == '__main__':
     preprocessing tasks:    
     a. select titles randomly
     b. balance the number of positive and negative examples
-    c. validate the data formate of titles
+    c. validate the data format of titles
     d. get skipgrams around known pattern words
     """
     parser = argparse.ArgumentParser(description='Some preprocess tasks you need to finish.')
