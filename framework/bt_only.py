@@ -11,8 +11,9 @@ from os.path import join, isfile
 def extract_candidate_chunks(text, grammar=r'KT: {(<JJ>* <NN.*>+ <IN>)? <JJ>* <NN.*>+}'):
     import itertools, nltk, string
 
-    # set the dir of nltk_data, added by jerry
-    nltk.data.path.append('/home/guanhua/sunhongyu/iGitRepo/project/other/nltk_data')
+    # set the dir of nltk_data, input your own
+    nltk_data_dir = input('the directory of nltk_data: ')
+    nltk.data.path.append(nltk_data_dir)
 
     # exclude candidates that are stop words or entirely punctuation
     punct = set(string.punctuation)
@@ -43,16 +44,16 @@ def predict_with_rule(sentences):
     for sentence in sentences:
         words = [word.lower() for word in sentence.split(' ')]
         if any(word in words for word in patterns):
-            # 找出 words 与 patterns 的交集
+            # find intersection between words and patterns
             inters = set(words).intersection(patterns)
             flag = None
             for inter in inters:
-                # 用flag 标记inter是否为'for'
+                # flag to record whether inter == 'for' or not
                 if inter == 'for':
                     flag = True
                 else:
                     flag = False
-                # 找到inter在句子中的位置，前后分别做chunk
+                # applying chunking operation to two parts split by inter
                 idx = words.index(inter)
                 former = extract_candidate_chunks(' '.join(words[:idx]))
                 latter = extract_candidate_chunks(' '.join(words[idx+1:]))
@@ -72,7 +73,7 @@ def predict_with_rule(sentences):
                     else:
                         label += 'O '
                 labels.append(label)
-                break   # pattern word选一个词就好
+                break   # just select one pattern word
 
         elif 'based' in words and 'on' in words:
             label = ''
@@ -107,7 +108,7 @@ def evaluate_on_gt():
         print('*************', f, '*************')
         with open(join(gt_path, f)) as fin, \
                 open('rule-based.groundtruth', 'a') as fout:
-            lines = fin.readlines() # lines 的类型是list，可以直接传入predict_with_rule
+            lines = fin.readlines() # the data type of 'lines' is a list, which function predict_with_rule needs.
 
             if len(lines)%3 != 0:
                 raise Exception('>>> File', f, 'format ERROR\n')
@@ -119,12 +120,12 @@ def evaluate_on_gt():
                 if idx % 3 == 1:
                     titles.append(line)
             preds = predict_with_rule(titles)
-            
+
             # print('len(titles):', len(titles))
             # print('len(lines):', len(lines))
             # print('len(preds):', len(preds))
             for idx, pred in enumerate(preds):
-                fout.write(lines[idx*3])    # 空行或注释
+                fout.write(lines[idx*3])    # blank line or commented line
                 fout.write(lines[idx*3 + 1])    # title
                 fout.write(pred + '\n')   # pred
 
@@ -187,12 +188,15 @@ def evaluate_on_dataset():
                     labels.append(' '.join(label))
                     title.clear()
                     label.clear()
-        # 传入的titles需要是个list，其中每个元素是字符串，代表一个title
+        # the following function needs a 'list' as the parameter,
+        # each element in the list stands for a title
         preds = predict_with_rule(titles)
 
         print('len(titles):', len(titles))
         print('len(labels):', len(labels))
         print('len(preds):', len(preds))
+
+        # for testing purpose
         # for (ti,pr) in zip(titles, preds):
         #     print(ti, '\n', pr)
         # print(titles[22919])
