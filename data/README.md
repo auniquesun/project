@@ -1,2 +1,2 @@
 ## Introduction
-Please download data from [here](https://www.openacademic.ai/oag), and extract .zip files into this directory. The link will be updated in time.
+Please download data from [here](https://www.openacademic.ai/oag) and [here](https://www.aminer.cn/citation), and extract .zip files into this directory. Specifically, we use mag_papers_0.zip and DBLP-Citation-network V10. Note the size of these two data files is large, maybe it will spend a lot of time on downloading.
