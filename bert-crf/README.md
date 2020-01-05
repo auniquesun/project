@@ -40,7 +40,7 @@ python bert_seq_labeling.py\
     --output_dir=./output/result_dir
 ```
 
-**Notice:** cased model was recommened, according to [this](https://arxiv.org/abs/1810.04805) paper. CoNLL-2003 dataset and perl Script comes from [here](https://www.clips.uantwerpen.be/conll2003/ner/)
+**Notice:** cased model was recommened, according to [this](https://arxiv.org/abs/1810.04805) paper. CoNLL-2003 dataset comes from [here](https://www.clips.uantwerpen.be/conll2003/ner/)
 
 
 ### Results
