@@ -60,7 +60,7 @@ python evaluate.py
 
 Data iterators and utils are in `model/data_utils.py` and the model with training/test procedures is in `model/ner_model.py`
 
-Training time on NVidia Tesla K80 is 110 seconds per epoch on CoNLL train set using characters embeddings and CRF.
+Training time on NVidia GeForce RTX 2080 is around 25min per epoch on training set using characters embeddings and CRF.
 
 
 
