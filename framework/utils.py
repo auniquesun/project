@@ -190,7 +190,7 @@ class Preprocess:
         N = input('within function "line_N_K", please input N: ')
         for i in range(int(N) * 1000):
             r = randint(0, len(lines)-1)
-            print('randint:', r)
+            # print('randint:', r)
             title = json.loads(lines[r])['title']
             if d.check(title[0]) and d.check(title[len(title)-1]):
                 titles.append(title)
