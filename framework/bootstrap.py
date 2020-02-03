@@ -72,12 +72,12 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Input parameters of Bootstrapping Iteration.')
     parser.add_argument('-s', '--size', default=3, help='window size centered on the pattern word.')
     parser.add_argument('-i', '--iters', default=5, help='iterations of bootsrapping iteration.')
-    parser.add_argument('-t', '--threshold', default=100, help='occurrences threshold of pattern words.')
+    parser.add_argument('-r', '--threshold', default=100, help='occurrences threshold of pattern words.')
     args = parser.parse_args()
 
     s = args.size
     iters = args.iters
-    t = args.threshold
+    r = args.threshold
 
     for i in range(iters):
-        append_new_pattern(s, t)
+        append_new_pattern(s, r)
