@@ -6,7 +6,7 @@ Copyright 2019 *** (for blind review)
 Date: 2019/11/14
 """
 
-import argparser
+import argparse
 
 
 def find_new_pattern(window_size):
@@ -72,12 +72,12 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Input parameters of Bootstrapping Iteration.')
     parser.add_argument('-s', '--size', default=3, help='window size centered on the pattern word.')
     parser.add_argument('-i', '--iters', default=5, help='iterations of bootsrapping iteration.')
-    parser.add_argument('-h', '--threshold', default=100, help='occurrences threshold of pattern words.')
+    parser.add_argument('-t', '--threshold', default=100, help='occurrences threshold of pattern words.')
     args = parser.parse_args()
 
     s = args.size
     iters = args.iters
-    h = args.threshold
+    t = args.threshold
 
     for i in range(iters):
-        append_new_pattern(s, h)
+        append_new_pattern(s, t)
