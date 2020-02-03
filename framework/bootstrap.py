@@ -51,7 +51,7 @@ def append_new_pattern(window_size, threshold):
     if len(patterns) > 0:
         with open('new_pattern_words.txt', 'w') as f:
             for pattern in patterns:
-                f.write(pattern + '\n')
+                # f.write(pattern + '\n')
                 if pattern.lower() in patt2counts.keys():
                     patt2counts[pattern.strip().lower()] += 1
                 else:
