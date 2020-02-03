@@ -13,8 +13,8 @@ class Preprocess:
     def make_balance(self):
         patt_file = input('fin >>> please input the pattern file: ')
         title_file = input('fout <<< please input the title file: ')
-        with open('title/' + 'title1.txt') as fin, open('pattern/' + patt_file) as fin_patt, \
-                open('title/' + title_file, 'w') as fout:
+        with open('../data/title/' + 'title1.txt') as fin, open('../data/pattern/' + patt_file) as fin_patt, \
+                open('../data/title/' + title_file, 'w') as fout:
             lines = fin.readlines()
             patts = fin_patt.readlines()
             for patt in patts:
@@ -29,7 +29,7 @@ class Preprocess:
         file_patt = input('fin > enter pattern file name: ')
         file_title = input('fin > enter title file name: ')
         file_train = input('fout < enter train file name: ')
-        with open('pattern/' + file_patt) as fin_pattern, open('title/' + file_title) as fin_title, open('data/' + file_train, 'w') as fout:
+        with open('../data/pattern/' + file_patt) as fin_pattern, open('../data/title/' + file_title) as fin_title, open('../data/' + file_train, 'w') as fout:
             lines_pattern = fin_pattern.readlines()
             lines_title = fin_title.readlines()
 
@@ -110,8 +110,8 @@ class Preprocess:
         file_title = input('fin > enter title file name: ')
         file_patt = input('fout < enter pattern file name: ')
         file_title_real = input('fout < enter real title file name: ')
-        with open('title/' + file_title) as fin, open('pattern/' + file_patt, 'w') as fout, \
-                open('title/' + file_title_real, 'w') as fout_real:
+        with open('../data/title/' + file_title) as fin, open('../data/pattern/' + file_patt, 'w') as fout, \
+                open('../data/title/' + file_title_real, 'w') as fout_real:
             lines = fin.readlines()
             for index, line in enumerate(lines):
                 if len(pos_examples) >= 500000 and len(neg_examples) >= 500000:
@@ -210,7 +210,7 @@ class Preprocess:
             files.extend(['mag_papers_0.txt', 'mag_papers_1.txt', 'mag_papers_2.txt', 'mag_papers_3.txt'])
 
         file_title = input('fout < enter title file name: ')
-        with open ('title/' + file_title, 'w') as fout:
+        with open ('../data/title/' + file_title, 'w') as fout:
             for f in files[3:4]:
                 with open(join(prefix, dataset, f)) as fin:
                     lines = fin.readlines()
@@ -223,7 +223,7 @@ class Preprocess:
 
     def validate_standard_data(self):
         valid_name = input('enter the file name to be validated: ')
-        with open('data/' + valid_name) as fin:
+        with open('../data/' + valid_name) as fin:
             lines = fin.readlines()
             for index, line in enumerate(lines):
                 if len(line.strip()) > 0:
@@ -237,9 +237,9 @@ class Preprocess:
         print('>> starting getting pattern skipgram')
         file_title = input('fin > enter title file name: ')
         file_patt_sg = input('fout < enter pattern skipgram file name: ')
-        with open('title/' + file_title) as fin_title, \
+        with open('../data/title/' + file_title) as fin_title, \
                 open('pattern_words.txt') as fin_patt_words, \
-                open('skipgram/' + file_patt_sg, 'w') as fout_patt_sg:
+                open('../data/skipgram/' + file_patt_sg, 'w') as fout_patt_sg:
             lines_title = fin_title.readlines()
             print('lines: ' + str(len(lines_title)))
             patt_words = fin_patt_words.readlines()
@@ -269,7 +269,7 @@ class Preprocess:
         file_patt = input('fin > enter pattern file name: ')
         file_title = input('fin > enter title file name: ')
         file_select = input('fout < enter select file name: ')
-        with open('../pattern/' + file_patt) as fin_pattern, open('../title/' + file_title) as fin_title, open('../title/' + file_select, 'w') as fout:
+        with open('../data/pattern/' + file_patt) as fin_pattern, open('../data//title/' + file_title) as fin_title, open('../data//title/' + file_select, 'w') as fout:
             lines_pattern = fin_pattern.readlines()
             lines_title = fin_title.readlines()
             for line_pattern in lines_pattern:
