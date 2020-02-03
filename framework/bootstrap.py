@@ -22,7 +22,7 @@ def find_new_pattern(window_size):
     new_patterns = []
     # input parameter: the group of titles
     file_titles_new = input('input titles file name: ')
-    with open('../data/' + file_titles_new) as fin_titles_new:
+    with open('../data/title/' + file_titles_new) as fin_titles_new:
         titles = fin_titles_new.readlines()
         for title in titles:
             for phrase in phrases:
@@ -61,8 +61,8 @@ def append_new_pattern(window_size, threshold):
 
     # output: new pattern words, which are stored in a .txt file
     # note: open the file with 'append' mode
-    with open('new_pattern_words.txt', 'a') as f:
-        f.write('\n')
+    with open('new_pattern_words.txt', 'w') as f:
+        # f.write('\n')
         for key in patt2counts.keys():
             if key.isalpha() and patt2counts[key] >= threshold:
                 f.write(key.lower() + ' ' + str(patt2counts[key]) + '\n')
@@ -70,9 +70,9 @@ def append_new_pattern(window_size, threshold):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Input parameters of Bootstrapping Iteration.')
-    parser.add_argument('-s', '--size', default=3, help='window size centered on the pattern word.')
-    parser.add_argument('-i', '--iters', default=5, help='iterations of bootsrapping iteration.')
-    parser.add_argument('-r', '--threshold', default=100, help='occurrences threshold of pattern words.')
+    parser.add_argument('-s', '--size', default=3, type=int, help='window size centered on the pattern word.')
+    parser.add_argument('-i', '--iters', default=9, type=int, help='iterations of bootsrapping iteration.')
+    parser.add_argument('-r', '--threshold', default=100, type=int, help='occurrences threshold of pattern words.')
     args = parser.parse_args()
 
     s = args.size
