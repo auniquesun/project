@@ -1,0 +1,67 @@
+/***
+    Dataset Name:
+    =========== group id ===========
+    term1 count1
+    term2 count2
+    ...
+ ***/
+
+MAG:
+=========== 1 ===========
+based on 619
+through 199
+via 154
+using 356
+with 2077
+by 978
+for 1362
+
+=========== 2 ===========
+based on 1087
+through [no results]
+via 169
+using 605
+with 1941
+by 1029
+for 14160
+
+=========== 3 ===========
+based on 1203
+through 211
+via 204
+using 2081
+with [no results]
+by 330
+for 14120
+
+
+AMiner:
+=========== 1 ===========
+based on 5699
+through 837
+via 962
+using 7462
+with 8113
+by 1796
+for 36065
+
+=========== 2 ===========
+based on 5723
+through 891
+via 881
+using 7422
+with 7990
+by 1812
+for 35352
+
+=========== 3 ===========
+based on 5634
+through 1011
+via 954
+using 7599
+with 8230
+by 1783
+for 36273
+
+
+PWC:
