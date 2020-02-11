@@ -2,9 +2,10 @@
 # -*- coding:utf-8 -*-
 
 """
-Copyright 2019 *** (for blind review)
-Date: 2019/11/14
+Copyright 2020 *** (for blind review)
+Date: 2020/02/08
 """
+
 
 def generate_standard_data():
     print('>> starting building standard data')
