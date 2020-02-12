@@ -29,7 +29,7 @@ python bert_seq_labeling.py\
     --do_train=True   \
     --do_eval=True   \
     --do_predict=True \
-    --data_dir=data   \
+    --data_dir=../../data   \
     --vocab_file=cased_L-12_H-768_A-12/vocab.txt  \
     --bert_config_file=cased_L-12_H-768_A-12/bert_config.json \
     --init_checkpoint=cased_L-12_H-768_A-12/bert_model.ckpt   \
