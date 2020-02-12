@@ -185,7 +185,7 @@ class DataProcessor(object):
         """Gets the list of labels for this data set."""
         raise NotImplementedError()
 
-    # 找到了，我应该修改这个方法，读取我的example
+    # modify this function to use your own dataset
     @classmethod    
     def _read_data(cls,input_file):
         """Read a BIO data!"""
@@ -730,8 +730,8 @@ def main(_):
 
     if FLAGS.do_gt:
         print("\n************ Evaluation on Groundtruth ************")
-        # 生成 groundtruth 数据
-        # 应该写成一行一个词+一个标签的形式，统一用 evaluate 做
+        # generate groundtruth
+        # data format: (word, label)/per line
         # gt_path = 'data_new/groundtruth'
         # ano_gt_path = 'data_new'
         # words_list = []
