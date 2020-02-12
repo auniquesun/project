@@ -8,7 +8,7 @@
     --do_eval=True   \
     --do_predict=True \
     --do_gt=False \
-    --data_dir=../data   \
+    --data_dir=../../data   \
     --vocab_file=bert/cased_L-12_H-768_A-12/vocab.txt  \
     --bert_config_file=bert/cased_L-12_H-768_A-12/bert_config.json \
     --init_checkpoint=bert/cased_L-12_H-768_A-12/bert_model.ckpt   \
