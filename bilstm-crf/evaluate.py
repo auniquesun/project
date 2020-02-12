@@ -156,7 +156,7 @@ def main():
                     'evaluate_on_testset(0)/interactive_shell(1): '
                 )
     if option == '0':
-        # 直接进去predict就行，没必要在test上evaluate，当然是可以的
+        # evaluate the model on test set
         # create dataset
         test = CoNLLDataset(config.filename_test, config.processing_word,
                             config.processing_tag, config.max_iter)
