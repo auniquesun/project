@@ -8,4 +8,4 @@ returned by previous two steps, and this step corresponds to [Algorithm 3](frame
 
 
 # Contact
-Anyone who is confronted with problems can open issues under this project. I will reply you in time.
+Anyone who is confronted with problems can open issues under this project. I am looking forward your voices and I will reply you in time.
